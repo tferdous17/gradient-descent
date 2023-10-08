@@ -21,6 +21,8 @@ for _ in range(1000):
     new_y = y_function(new_x) # new Y coord is simply x^2
     current_pos = (new_x, new_y) # set new current_pos per iteration
 
-plt.plot(x, y)
-plt.scatter(current_pos[0], current_pos[1], color="red")
-plt.show()
+    plt.plot(x, y)
+    plt.scatter(current_pos[0], current_pos[1], color="red")
+    plt.pause(0.001)
+    plt.clf()
+
