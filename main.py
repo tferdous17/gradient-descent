@@ -13,6 +13,13 @@ y = y_function(x)
 
 current_pos = (80, y_function(80))
 
+learning_rate = 0.01
+
+for _ in range(1000):
+    new_x = current_pos[0] - learning_rate * y_derivative(current_pos[0])
+    new_y = y_function(new_x)
+    current_pos = (new_x, new_y)
+
 plt.plot(x, y)
 plt.scatter(current_pos[0], current_pos[1], color="red")
 plt.show()
